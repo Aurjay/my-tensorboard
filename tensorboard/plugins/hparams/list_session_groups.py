@@ -30,7 +30,7 @@ from tensorboard.plugins.hparams import metadata
 from tensorboard.plugins.hparams import metrics
 
 
-class Handler(object):
+class Handler:
     """Handles a ListSessionGroups request."""
 
     def __init__(
@@ -565,14 +565,14 @@ class _MetricIdentifier:
     Attributes:
       group: Metric group corresponding to the dataset on which the model was
         evaluated.
-      tag: String tag assoicated with the metric.
+      tag: String tag associated with the metric.
     """
 
     group: str
     tag: str
 
 
-class _MetricStats(object):
+class _MetricStats:
     """A simple class to hold metric stats used in calculating metric averages.
 
     Used in _set_avg_session_metrics(). See the comments in that function

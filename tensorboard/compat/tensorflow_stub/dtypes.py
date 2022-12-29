@@ -23,7 +23,7 @@ _np_bfloat16 = pywrap_tensorflow.TF_bfloat16_type()
 
 
 # @tf_export("DType")
-class DType(object):
+class DType:
     """Represents the type of the elements in a `Tensor`.
 
     The following `DType` objects are defined:
@@ -323,7 +323,6 @@ class DType(object):
 # Define data type range of numpy dtype
 dtype_range = {
     np.bool_: (False, True),
-    np.bool8: (False, True),
     np.uint8: (0, 255),
     np.uint16: (0, 65535),
     np.int8: (-128, 127),
